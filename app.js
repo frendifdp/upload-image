@@ -11,6 +11,9 @@ const storage = multer.diskStorage({
   }
 })
 
+app.get('/', (req, res) => {
+	res.send({message: "ook"})
+})
 
 app.post('/upload', (req, res, next) => {
 	const upload = multer({ storage }).single('path')
